@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+}
+
+.conteudo-principal {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  vertical-align: top;
+}
+
+td:nth-child(2) {
+  max-width: 400px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-editar,
+.btn-excluir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.25s, box-shadow 0.25s;
+  white-space: nowrap;
+}
+
+.btn-editar {
+    background-color: #4caf50;
+}
+
+.btn-editar:hover {
+    background-color: #43a047;
+    box-shadow: 0 4px 12px rgba(67, 160, 71, 0.5);
+}
+
+.btn-excluir {
+    background-color: #f44336;
+}
+
+.btn-excluir:hover {
+    background-color: #e53935;
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.5);
+}
+
+.modal .modal-title {
+  font-weight: bold;
+}
+
+.modal .modal-body span {
+  font-weight: bold;
+}
+
+.paginacao {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.paginacao .seta,
+.paginacao button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.paginacao button.pagina-ativa {
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.paginacao button:disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .acoes {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-editar,
+  .btn-excluir {
+    width: 100%;
+    justify-content: center;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}

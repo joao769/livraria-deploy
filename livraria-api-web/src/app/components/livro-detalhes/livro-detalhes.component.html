@@ -1,0 +1,26 @@
+@if (exibirLivro) {
+  <div class="detalhe-container">
+    <div class="imagem-card">
+      <img [src]="exibirLivro.imagemUrl" alt="Capa do livro" class="imagem-livro" />
+    </div>
+
+    <div class="card conteudo-card">
+      <h2 class="titulo">{{ exibirLivro.titulo }}</h2>
+
+      <div class="info-grid">
+        <div class="info-box"><strong>Autor:</strong> {{ exibirLivro.autor }}</div>
+        <div class="info-box"><strong>Ano:</strong> {{ exibirLivro.anoPublicacao }}</div>
+        <div class="info-box"><strong>ISBN:</strong> {{ exibirLivro.isbn }}</div>
+        <div class="info-box"><strong>Gênero:</strong> {{ exibirLivro.genero }}</div>
+        <div class="info-box"><strong>Páginas:</strong> {{ exibirLivro.numPaginas }}</div>
+      </div>
+
+      <div class="info-detalhes">
+        <strong>Descrição:</strong>
+        <p class="descricao">{{ exibirLivro.descricao }}</p>
+        <strong>Preço:</strong>
+        <p class="preco">R$ {{ exibirLivro.preco }}</p>
+      </div>
+    </div>
+  </div>
+}

@@ -1,0 +1,45 @@
+services:
+  api:
+    build:
+      context: ./livraria-api
+    container_name: livraria-api
+    ports:
+      - "3000:3000"
+    environment:
+      - MEU_USUARIO_BANCO_DADOS=root
+      - MINHA_SENHA_BANCO_DADOS=minhasenha
+      - DB_HOST=mysql_db
+    depends_on:
+      - mysql_db
+    networks:
+      - livraria-net
+
+  frontend:
+    build:
+      context: ./livraria-api-web
+    container_name: livraria-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - api
+    networks:
+      - livraria-net
+
+  mysql_db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: livraria
+      MYSQL_ROOT_PASSWORD: minhasenha
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - livraria-net
+
+networks:
+  livraria-net:
+    driver: bridge
+
+volumes:
+  mysql-data:

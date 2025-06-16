@@ -1,0 +1,26 @@
+<header class="cabecalho">
+    <div class="container-cabecalho">
+        <a routerLink="/" class="logo-livraria">
+            <img src="/assets/icon.png"
+                alt="Ícone" class="icone-logo" />
+            <span class="nome-livraria">Livraria-api</span>
+        </a>
+
+        <div class="menu-toggle" [class.active]="menuAberto" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu-navegacao" [class.aberto]="menuAberto">
+            @for (item of itensMenu; track item.link) {
+            <li class="item-menu">
+                <a class="link-navegacao" [routerLink]="item.link" routerLinkActive="ativo"
+                    [routerLinkActiveOptions]="{ exact: true }" (click)="menuAberto = false">
+                    {{ item.label }}
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</header>

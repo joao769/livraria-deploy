@@ -1,0 +1,92 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: #1E1E2F;
+  color: #EAEAEA;
+}
+
+.secao-banner {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background-image: url('/assets/livros.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.filtro-escuro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.65;
+  z-index: 1;
+}
+
+.conteudo-central {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo-banner {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #EAEAEA;
+}
+
+.subtitulo-banner {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #EAEAEA;
+}
+
+.botao-banner {
+  background-color: #3A6F8F;
+  color: #ECF0F1;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-flex;
+  border: none;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao-banner:hover {
+  background-color: #2C5670;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .titulo-banner {
+    font-size: 2.2rem;
+  }
+
+  .subtitulo-banner {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .botao-banner {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
