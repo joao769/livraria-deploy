@@ -7,7 +7,7 @@ import { LivrosModule } from './livros/livros.module';
       ConfigModule.forRoot(),
       SequelizeModule.forRoot({
         dialect: 'mysql',
-        host: 'localhost',
+        host: process.env.DB_HOST,
         port: 3306,
         username: process.env.MEU_USUARIO_BANCO_DADOS,
         password: process.env.MINHA_SENHA_BANCO_DADOS,
