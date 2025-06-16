@@ -34,6 +34,7 @@ Antes de começar, garanta que você tenha os seguintes softwares instalados:
     docker-compose up --build
     ```
     A primeira execução pode demorar um pouco, pois o Docker precisará baixar as imagens base e instalar as dependências.
+    
 
 ## ✅ Acessando os Serviços
 
